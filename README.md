@@ -9,7 +9,7 @@ Link do curso [Python Pro](https://pythonpro.com.br/)
 
 Suportada a versão 3 de Python
 
-Tópicos a serem abordados:
+Tópicos a serem abordados OK:
 
 1. Git
 
