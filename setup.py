@@ -24,8 +24,7 @@ standard_exclude_directories = [
 # Note: you may want to copy this into your setup.py file verbatim, as
 # you can't import this from another package, when you don't know if
 # that package is installed yet.
-def find_package_data(
-    where=".", package="", exclude=standard_exclude, exclude_directories=standard_exclude_directories, only_in_packages=True, show_ignored=False):
+def find_package_data(where=".", package="", exclude=standard_exclude, exclude_directories=standard_exclude_directories, only_in_packages=True, show_ignored=False):
     """
     Return a dictionary suitable for use in ``package_data``
     in a distutils ``setup.py`` file.
@@ -55,8 +54,7 @@ def find_package_data(
                 bad_name = False
                 for pattern in exclude_directories:
                     if (fnmatchcase(name, pattern)
-                        or fn.lower() == pattern.lower()):
-                        bad_name = True
+                        or fn.lower() == pattern.lower()):bad_name = True
                         if show_ignored:
                             print >> sys.stderr, (
                                 "Directory %s ignored by pattern %s"
