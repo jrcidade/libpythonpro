@@ -101,7 +101,7 @@ NAME = PACKAGE
 DESCRIPTION = "Modulo para exemplificar contrução de projetos Python no curso Pytools"
 AUTHOR = "Jrcidade"
 AUTHOR_EMAIL = "jrcidade@gmail.com"
-URL = "https://github.com/jrcidade/libpythonpro"
+URL = "https://github.com/jrcidade/libpythonprojr"
 VERSION = __import__(PACKAGE).__version__
 
 
