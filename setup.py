@@ -24,12 +24,7 @@ standard_exclude_directories = [
 # Note: you may want to copy this into your setup.py file verbatim, as
 # you can't import this from another package, when you don't know if
 # that package is installed yet.
-def find_package_data(
-    where=".",
-    package="",
-    exclude=standard_exclude,
-    exclude_directories=standard_exclude_directories,
-    only_in_packages=True, show_ignored=False):
+def find_package_data(where=".", package="", exclude=standard_exclude, exclude_directories=standard_exclude_directories, only_in_packages=True, show_ignored=False):
     """
     Return a dictionary suitable for use in ``package_data``
     in a distutils ``setup.py`` file.
