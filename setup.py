@@ -29,8 +29,7 @@ def find_package_data(
     package="",
     exclude=standard_exclude,
     exclude_directories=standard_exclude_directories,
-    only_in_packages=True,
-    show_ignored=False):
+    only_in_packages=True, show_ignored=False):
     """
     Return a dictionary suitable for use in ``package_data``
     in a distutils ``setup.py`` file.
