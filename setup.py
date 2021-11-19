@@ -57,7 +57,9 @@ def find_package_data(where=".", package="", exclude=standard_exclude, exclude_d
                     if (fnmatchcase(name, pattern)
                             or fn.lower() == pattern.lower()):
                         bad_name = True
-                        if show_ignored:
+                        if not show_ignored:
+                            pass
+                        else:
                             print >> sys.stderr, (
                                     "Directory %s ignored by pattern %s"
                                     % (fn, pattern))
