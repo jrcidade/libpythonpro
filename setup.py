@@ -24,7 +24,13 @@ standard_exclude_directories = [
 # Note: you may want to copy this into your setup.py file verbatim, as
 # you can't import this from another package, when you don't know if
 # that package is installed yet.
-def find_package_data(where=".", package="", exclude=standard_exclude, exclude_directories=standard_exclude_directories, only_in_packages=True, show_ignored=False):
+def find_package_data(
+    where=".",
+    package="",
+    exclude=standard_exclude,
+    exclude_directories=standard_exclude_directories,
+    only_in_packages=True,
+    show_ignored=False):
     """
     Return a dictionary suitable for use in ``package_data``
     in a distutils ``setup.py`` file.
@@ -54,8 +60,8 @@ def find_package_data(where=".", package="", exclude=standard_exclude, exclude_d
                 bad_name = False
                 for pattern in exclude_directories:
                     if (fnmatchcase(name, pattern)
-                        or fn.lower() == pattern.lower()):bad_name = \
-                        True
+                        or fn.lower() == pattern.lower()):
+                        bad_name = True
                         if show_ignored:
                             print >> sys.stderr, (
                                 "Directory %s ignored by pattern %s"
@@ -93,7 +99,7 @@ def find_package_data(where=".", package="", exclude=standard_exclude, exclude_d
 PACKAGE = "libpythonpro"
 NAME = PACKAGE
 DESCRIPTION = "Modulo para exemplificar contrução de projetos Python no curso Pytools"
-AUTHOR = "Jrcidade"
+AUTHOR = "JRCIDADE"
 AUTHOR_EMAIL = "jrcidade@gmail.com"
 URL = "https://github.com/jrcidade/libpythonpro"
 VERSION = __import__(PACKAGE).__version__
@@ -103,11 +109,10 @@ setup(
     name=NAME,
     version=VERSION,
     description=DESCRIPTION,
-    long_description=read('README.md'),
-    long_desccription_content_type='text/markdown',
+    long_description=URL,
     author=AUTHOR,
     author_email=AUTHOR_EMAIL,
-    license=read('LICENSE'),
+    license="BSD",
     url=URL,
     packages=find_packages(exclude=["tests.*", "tests"]),
     package_data=find_package_data(PACKAGE, only_in_packages=False),
@@ -121,7 +126,6 @@ setup(
         "Framework :: Pytest",
     ],
     install_requires=[
-      'requests'
-    ],
-    zip_safe=False,
+        'requests'
+    ]
 )
